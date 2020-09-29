@@ -1,0 +1,1151 @@
+<!doctype html>
+<html>
+<head>
+<title>Tour Wisata</title>
+<script type="text/javascript" src="jQuery-2.1.4.min.js"></script>
+ <script type="text/javascript" src="jquery.cycle2.min.js"></script>
+ 
+<link rel="stylesheet" type="text/css" href="csswisata.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="sweetalert2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="sweetalert2.js"></script>  
+<script type="text/javascript" src="custom.js"></script>
+  
+
+<script type="text/javascript" src="fungsi.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+<br>
+<h1 align="center" class="animated infinite tada">FANTASTIC 5</h1>
+<h1 align="center" class="animated infinite tada">TOUR & TRAVEL</h1>
+
+<div id = "gambargerak" class="cycle-slideshow" style="display:none">
+ <span class="cycle-prev">&#9001;</span> <!-- Untuk membuat tanda panah di kiri slider -->
+ <span class="cycle-next">&#9002;</span> <!-- Untuk membuat tanda panah di kanan slider -->
+ <span class="cycle-pager"></span>  <!-- Untuk membuat tanda bulat atau link pada slider -->
+ 
+ <img src="visitindonesia.jpg" alt="Gambar Pertama" height="350px" width="1366px">
+ <img src="paris.jpg" alt="Gambar Kedua" height="350px" width="1366px">
+ <img src="hawaii.jpg" alt="Gambar Ketiga" height="350px" width="1366px">
+ <img src="singapore.png" alt="Gambar Keempat" height="350px" width="1366px">
+</div>
+
+<br>
+<nav id="navigasi">
+    <ul id="menuContainer">
+        <li ><a href="tourwisata.html" >Home</a></li>
+        <li><a href="#panelpaket" id="pakettour" onClick="pakettour()">Paket Tour</a>
+         
+        </li>
+       
+      
+        <li><a href="#" onClick="about();">ABOUT</a>
+           
+        </li>
+      
+    </ul>
+</nav>
+
+<div id="panelpaket" class="panel1" style="display : none;">
+
+<div id="paket1" align="center">
+	<br>
+	<h1 style="font-size: 30px;color: aliceblue">HEMAT</h1>
+	<p style="font-size: 20px;color: aliceblue">Tour Dalam Negri</p>
+	<br>
+	<img class="animated infinite pulse" src="wonderful_indonesia.jpg" width="300px" style="border-radius: 20%;">
+	<br>
+	<center><input type="button" id="yuk" class="button" value="Yuk lihat"  ></center>
+</div>
+<div id="paket2" align="center">
+	<br>
+	<h1 style="font-size: 30px;color: aliceblue">HAPPY</h1>
+	<p style="font-size: 20px;color: aliceblue">Tour Luar Negri</p>
+	<br>
+	<img class="animated infinite pulse" src="luar_negri.jpg" width="250px" style="border-radius: 20%;">
+	<br>
+	<center><input type="button" id="yuk2" class="button" value="Yuk lihat"  ></center>
+</div>	
+
+		
+</div>
+<br><br>
+<pre>
+
+<table id="box2" style="margin: 0px auto; visibility: hidden;width:100%;" border="3" align="center">
+	<tr>
+	<td>
+	<center><h1 class="animated infinite bounce">Cari paket wisata dengan harga termurah? Disini aja !!</h1></center>
+ 		<z style="font-size:20px;">Negara tujuan                              Tanggal Keberangkatan 			  Lama waktu Tour	</z>
+ 		<b><select id="negara">
+	  <option nama="tanggal" value="singa">Singapura</option>
+	  <option nama="tanggal" value="hawaii">Hawaii</option>
+	  <option nama="tanggal" value="perancis">Perancis</option>
+	</select></b>	  			        		   <input type="text" id="datepicker"> 		   	   			<select id="lamatour">
+	  <option id="4hari" nama="tanggal" value="4hari">4 Hari 3 Malam</option>
+	  <option id="5hari" nama="tanggal" value="5hari">5 Hari 4 Malam</option>
+	  <option id="6hari" nama="tanggal" value="6hari">6 Hari 5 Malam</option>
+	</select>
+	
+	<center><a id="pilihhotel" href=""><input type="button" class="button"  value="Pilih Hotel dan Transport"  onclick="negara()"></a></center>
+	</td>	
+	</tr>
+</table></pre>
+
+<pre>
+<table id="box1" style="margin: 0px auto; visibility:  hidden;width:100%" border="3" align="center">
+	<tr>
+	<td>
+	<center><h1 class="animated infinite bounce">   Cari paket wisata dengan harga termurah? Disini aja !!</h1></center>
+ 		<z style="font-size:20px;">Negara tujuan                           Tanggal Keberangkatan 			  Lama waktu Tour</z>	
+ 		<z style="font-size:20px;">INDONESIA</z>	  			  			<input type="text" id="datepicker2"> 		   	  			<select id="lamatour2">
+	  <option nama="tanggal" value="4hari">4 Hari 3 Malam</option>
+	  <option nama="tanggal" value="5hari">5 Hari 4 Malam</option>
+	  <option nama="tanggal" value="6hari">6 Hari 5 Malam</option>
+	</select>
+	
+	<center><a id="pilihhotel2" href="#panelhotelkendaraan2"><input type="button" class="button"  value="Pilih Hotel dan Transport"  onclick="negara2()"></a></center>
+	</td>	
+	</tr>
+</table></pre>
+
+
+
+
+<div id="panelhotelkendaraan" class="panel2" style="display : none;">
+<br><br>
+ <table style="width:100%">
+  <tr style="font-size: 20px">
+    <th>Gambar</th>
+    <th>Jenis Kamar+fasilitas</th> 
+    <th>Transportasi</th>
+  </tr>
+  <tr>
+	<td><img src="porcelain.jpg" style="width:200px"</img></td>
+     <td>Porcelain Hotel by JL Asia                     
+    <br><span class="fa fa-star checked"></span> 
+	
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span> 
+ 
+
+ <button class="button2"  id="jeniskamar1" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup3'; pilihkamar(1);">Pilih Jenis Kamar </button></td>
+  
+   <div id="popup3">
+    	<div class="window2">
+        	<a href="#panelhotelkendaraan" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+			<div class="polaroid container gambarkamar" >
+  			<img src="" alt="Norway" id="deluxeimg" style="width:70%; padding-top: 20px" >
+  			<p id="kamar1"></p>
+  			<p><input type="radio" id="deluxe" name="hotel" value="deluxe" >DELUXE</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="standardimg" style="width:70%; padding-top: 20px;">
+  			<p id="kamar2"></p>
+  			<p><input type="radio" id="standard" name="hotel" value="standard" >STANDARD</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="superiorimg" style="width:70%; padding-top: 20px;">
+  			<p id="kamar3"></p>
+  			<p><input type="radio" name="hotel" id="superior" value="superior" >SUPERIOR</p>
+			</div>
+			<div id="hargadeluxe" style="display:none;">
+			<p id="isikamar1"><br>Harga Paket Yang anda pilih = IDR 1.623.235 / malam
+			<br><br>Pemandangan: Kota<br>
+			14 m²/151 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang queen<br><br></p>
+    		</div>
+    		<div id="hargastandard" style="display:none;">
+     		<p id="isikamar2"><br>Harga Paket Yang anda pilih = IDR 1.174.353 / malam
+			<br><br>Pemandangan tanpa jendela<br>
+			10 m²/108 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang queen<br><br></p>
+     		</div>
+     		<div id="hargasuperior" style="display:none;">
+     		<p id="isikamar3"><br>Harga Paket Yang anda pilih = IDR 1.224.114 / malam
+			<br><br>Pemandangan: Kota<br>
+			12 m²/129 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang queen<br><br></p>
+     		</div>
+     		<div id="hargadeluxe2" style="display:none;">
+			<p id="isikamar4"><br>Harga Paket Yang anda pilih = IDR 1.729.166 / malam
+			<br><br>Pemandangan: Kota<br>
+			13 m²/140 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang queen<br><br></p>
+    		</div>
+    		<div id="hargastandard2" style="display:none;">
+			<p id="isikamar5"><br>Harga Paket Yang anda pilih = IDR 1.395.560 / malam
+			<br><br>Pemandangan: Kota<br>
+			11 m²/118 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang queen<br><br></p>
+    		</div>
+    		<div id="hargasuperior2" style="display:none;">
+			<p id="isikamar6"><br>Harga Paket Yang anda pilih = IDR 1.641.836 / malam
+			<br><br>Pemandangan: Kota<br>
+			15 m²/161 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang queen<br><br></p>
+    		</div>
+    		<div id="hargadeluxe3" style="display:none;">
+			<p id="isikamar7"><br>Harga Paket Yang anda pilih = IDR 7.951.766 / malam
+			<br><br>Pemandangan: Kota<br>
+			86 m²/926 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			2 ranjang single dan 1 ranjang king<br><br></p>
+    		</div>
+    		<div id="hargastandard3" style="display:none;">
+			<p id="isikamar8"><br>Harga Paket Yang anda pilih = IDR 5.563.252 / malam
+			<br><br>Pemandangan: Kota<br>
+			47 m²/506 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			2 ranjang single<br><br></p>
+    		</div>
+    		<div id="hargasuperior3" style="display:none;">
+			<p id="isikamar9"><br>Harga Paket Yang anda pilih = IDR 12.927.840 / malam
+			<br><br>Pemandangan: Kebun<br>
+			145 m²/1561 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			1 ranjang queen<br><br></p>
+    		</div>
+     		
+      		<br>
+       		<a href="#panelhotelkendaraan"><button class="button button2" id="jenis">Berikutnya pilih kendaraan </button></a>
+        	
+       		</div>
+       		
+    </div>
+    
+    <td><center><select id="kendaraan">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+
+	</select><br><br><button class="button2" id="pilih1" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onclick="paket(1); pilihkamar(1);">Pilih</button> </center></td>
+	 
+  </tr>
+  <tr>
+    <td><img src="hotelg.jpg" style="width:200px; height:170px;"</img></td>
+    <td>Hotel G Singapore<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span> <button class="button2" href="#popup" id="jeniskamar" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup3';pilihkamar(2);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan2">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br><button class="button2" id="pilih2" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(1); pilihkamar(2);"> Pilih </button></center></td>
+  </tr>
+  <tr>
+    <td><img src="marina.jpg" style="width:200px"</img></td>
+    <td>Marina Bay Sands<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> <button class="button2"  id="jeniskamar2" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup3'; pilihkamar(3);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan3">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br>
+   <button class="button2" id="pilih3" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(1); pilihkamar(3);"> Pilih </button></center></td>
+  </tr>
+</table>
+
+
+</div>
+
+
+<div id="panelhotelkendaraan3" class="panel2" style="display : none;">
+<br><br>
+ <table style="width:100%">
+  <tr style="font-size: 20px">
+    <th>Gambar</th>
+    <th>Jenis Kamar+fasilitas</th> 
+    <th>Transportasi</th>
+  </tr>
+  <tr>
+	<td><img src="hawaihotel.jpg" style="width:200px"></img></td>
+     <td>Alonihani resort                   
+    <br><span class="fa fa-star checked"></span> 
+	
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> 
+ 
+
+ <button class="button2"  id="jeniskamar7" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup5'; pilihkamar3(1);">Pilih Jenis Kamar </button></td>
+  
+   <div id="popup5">
+    	<div class="window2">
+        	<a href="#panelhotelkendaraan3" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+			<div class="polaroid container gambarkamar" >
+  			<img src="" alt="Norway" id="deluxeimg3" style="width:70%; padding-top: 20px" >
+  			<p id="kamar7"></p>
+  			<p><input type="radio" id="deluxe3" name="hotel" value="deluxe" >DELUXE</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="standardimg3" style="width:70%; padding-top: 20px;">
+  			<p id="kamar8"></p>
+  			<p><input type="radio" id="standard3" name="hotel" value="standard" >STANDARD</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="superiorimg3" style="width:70%; padding-top: 20px;">
+  			<p id="kamar9"></p>
+  			<p><input type="radio" name="hotel" id="superior3" value="superior" >SUPERIOR</p>
+			</div>
+			<div id="hargadeluxe" style="display:none;">
+			<p id="isikamar19"><br>Harga Paket Yang anda pilih = IDR 3.906.788 / malam
+			<br><br>Pemandangan: Samudra<br>
+			30.65 m²/330 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & Bathtub<br>
+			2 ranjang queen<br><br></p>
+    		</div>
+    		<div id="hargastandard" style="display:none;">
+     		<p id="isikamar20"><br>Harga Paket Yang anda pilih = IDR 3.170.302 / malam
+			<br><br>Pemandangan : Samudra<br>
+			30.65 m²/330 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & Bathtub<br>
+			1 ranjang King<br><br></p>
+     		</div>
+     		<div id="hargasuperior" style="display:none;">
+     		<p id="isikamar21"><br>Harga Paket Yang anda pilih = IDR 5.509.958 / malam
+			<br><br>Pemandangan: Samudra<br>
+			31 m²/334 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang Super King<br><br></p>
+     		</div>
+     		<div id="hargadeluxe2" style="display:none;">
+			<p id="isikamar22"><br>Harga Paket Yang anda pilih = IDR 4.863.840 / malam
+			<br><br>Pemandangan: Samudra<br>
+			38.46 m²/414 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			2 ranjang double dan 1 ranjang king<br><br></p>
+    		</div>
+    		<div id="hargastandard2" style="display:none;">
+			<p id="isikamar23"><br>Harga Paket Yang anda pilih = IDR 3.509.010 / malam
+			<br><br>Pemandangan: Samudra<br>
+			38.46 m²/414 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			2 ranjang double atau 1 ranjang king<br><br></p>
+    		</div>
+    		<div id="hargasuperior2" style="display:none;">
+			<p id="isikamar24"><br>Harga Paket Yang anda pilih = IDR 7.776.724 / malam
+			<br><br>Pemandangan: Samudra<br>
+			77.95 m²/839 ft²<br>
+			2 Kamar Mandi<br>
+			Shower<br>
+			1 ranjang king atau 2 ranjang double<br><br></p>
+    		</div>
+    		<div id="hargadeluxe3" style="display:none;">
+			<p id="isikamar25"><br>Harga Paket Yang anda pilih = IDR 4.115.973 / malam
+			<br><br>Pemandangan: Kota<br>
+			31 m²/334 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang super king<br><br></p>
+    		</div>
+    		<div id="hargastandard3" style="display:none;">
+			<p id="isikamar26"><br>Harga Paket Yang anda pilih = IDR 3.215.012 / malam
+			<br><br>Pemandangan: Kota<br>
+			31 m²/334 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			2 ranjang double<br><br></p>
+    		</div>
+    		<div id="hargasuperior3" style="display:none;">
+			<p id="isikamar27"><br>Harga Paket Yang anda pilih = IDR 7.001.012 / malam
+			<br><br>Pemandangan: Pelabuhan<br>
+			45.06 m²/485 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			1 ranjang king<br><br></p>
+    		</div>
+     		
+      		<br>
+       		<a href="#panelhotelkendaraan3"><button class="button button2" >Berikutnya pilih kendaraan </button></a>
+        	
+       		</div>
+       		
+    </div>
+    
+    <td><center><select id="kendaraan7">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+
+	</select><br><br><button class="button2" id="pilih7" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onclick="paket(3); pilihkamar3(1);" >Pilih</button> </center></td>
+	 
+  </tr>
+  <tr>
+    <td><img src="hawaihotel2.jpg" style="width:200px; height:170px;"</img></td>
+    <td>Prince Waikiki<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span> <button class="button2" href="#popup" id="jeniskamar8" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup5';pilihkamar3(2);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan8">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br><button class="button2" id="pilih8" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(3); pilihkamar3(2);"> Pilih </button></center></td>
+  </tr>
+  <tr>
+    <td><img src="hawaihotel3.jpg" style="width:200px"</img></td>
+    <td>Honolulu<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> <button class="button2"  id="jeniskamar9" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup5'; pilihkamar3(3);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan9">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br>
+   <button class="button2" id="pilih9" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(3); pilihkamar3(3);"> Pilih </button></center></td>
+  </tr>
+</table>
+
+
+</div>
+
+
+<div id="panelhotelkendaraan4" class="panel2" style="display : none;">
+<br><br>
+ <table style="width:100%">
+  <tr style="font-size: 20px">
+    <th>Gambar</th>
+    <th>Jenis Kamar+fasilitas</th> 
+    <th>Transportasi</th>
+  </tr>
+  <tr>
+	<td><img src="angely.jpg" style="width:200px"></img></td>
+     <td>Angely Paris                
+    <br><span class="fa fa-star checked"></span> 
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star "></span>
+		<span class="fa fa-star "></span> 
+
+
+ <button class="button2"  id="jeniskamar7" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup6'; pilihkamar4(1);">Pilih Jenis Kamar </button></td>
+  
+   <div id="popup6">
+    	<div class="window2">
+        	<a href="#panelhotelkendaraan4" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+			<div class="polaroid container gambarkamar" >
+  			<img src="" alt="Norway" id="deluxeimg4" style="width:70%; padding-top: 20px" >
+  			<p id="kamar10"></p>
+  			<p><input type="radio" id="deluxe4" name="hotel" value="deluxe" >DELUXE</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="standardimg4" style="width:70%; padding-top: 20px;">
+  			<p id="kamar11"></p>
+  			<p><input type="radio" id="standard4" name="hotel" value="standard" >STANDARD</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="superiorimg4" style="width:70%; padding-top: 20px;">
+  			<p id="kamar12"></p>
+  			<p><input type="radio" name="hotel" id="superior4" value="superior" >SUPERIOR</p>
+			</div>
+			<div id="hargadeluxe" style="display:none;">
+			<p id="isikamar28"><br>Harga Paket Yang anda pilih = IDR 2.139.081 / malam
+			<br><br>Pemandangan: Kota<br>
+			15 m²/161 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & Bathtub<br>
+			1 ranjang queen<br><br></p>
+    		</div>
+    		<div id="hargastandard" style="display:none;">
+     		<p id="isikamar29"><br>Harga Paket Yang anda pilih = IDR 1.782.387 / malam
+			<br><br>Pemandangan : Kota<br>
+			14 m²/151 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & Bathtub<br>
+			1 ranjang queen<br><br></p>
+     		</div>
+     		<div id="hargasuperior" style="display:none;">
+     		<p id="isikamar30"><br>Harga Paket Yang anda pilih = IDR 2.426.344 / malam
+			<br><br>Pemandangan: Kota<br>
+			17 m²/183 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang King<br><br></p>
+     		</div>
+     		<div id="hargadeluxe2" style="display:none;">
+			<p id="isikamar31"><br>Harga Paket Yang anda pilih = IDR 2.498.042 / malam
+			<br><br>Pemandangan: Kota<br>
+			40 m²/431 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Balkon/teras<br>
+			2 ranjang single dan 1 ranjang double<br><br></p>
+    		</div>
+    		<div id="hargastandard2" style="display:none;">
+			<p id="isikamar32"><br>Harga Paket Yang anda pilih = IDR 1.564.869 / malam
+			<br><br>Pemandangan: Kota<br>
+			24 m²/258 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Balkon/teras<br>
+			1 ranjang double atau 2 ranjang single<br><br></p>
+    		</div>
+    		<div id="hargasuperior2" style="display:none;">
+			<p id="isikamar33"><br>Harga Paket Yang anda pilih = IDR 4.292.690 / malam
+			<br><br>Pemandangan: Kota<br>
+			74 m²/797 ft²<br>
+			2 Kamar Mandi<br>
+			Balkon/teras<br>
+			1 ranjang super king<br><br></p>
+    		</div>
+    		<div id="hargadeluxe3" style="display:none;">
+			<p id="isikamar34"><br>Harga Paket Yang anda pilih = IDR 5.168.379 / malam
+			<br><br>Pemandangan: Jalan<br>
+			30 m²/323 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			1 ranjang double<br><br></p>
+    		</div>
+    		<div id="hargastandard3" style="display:none;">
+			<p id="isikamar35"><br>Harga Paket Yang anda pilih = IDR 4.231.239 / malam
+			<br><br>Pemandangan: Jalan<br>
+			25 m²/269 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			1 ranjang double<br><br></p>
+    		</div>
+    		<div id="hargasuperior3" style="display:none;">
+			<p id="isikamar36"><br>Harga Paket Yang anda pilih = IDR 9.475.440 / malam
+			<br><br>Pemandangan: Jalan<br>
+			40 m²/431 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			2 ranjang double<br><br></p>
+    		</div>
+     		
+      		<br>
+       		<a href="#panelhotelkendaraan4"><button class="button button2" >Berikutnya pilih kendaraan </button></a>
+        	
+       		</div>
+       		
+    </div>
+    
+    <td><center><select id="kendaraan10">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+
+	</select><br><br><button class="button2" id="pilih10" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onclick="paket(4); pilihkamar4(1);" >Pilih</button> </center></td>
+	 
+  </tr>
+  <tr>
+    <td><img src="huatian.jpg" style="width:200px; height:170px;"</img></td>
+    <td>Hotel Huatian<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span> <button class="button2" id="jeniskamar8" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup6';pilihkamar4(2);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan11">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br><button class="button2" id="pilih11" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(4); pilihkamar4(2);"> Pilih </button></center></td>
+  </tr>
+  <tr>
+    <td><img src="balzac.jpg" style="width:200px"</img></td>
+    <td>Hotel Balzac<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> <button class="button2"  id="jeniskamar9" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup6'; pilihkamar4(3);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan12">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br>
+   <button class="button2" id="pilih12" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(4); pilihkamar4(3);"> Pilih </button></center></td>
+  </tr>
+</table>
+
+
+</div>
+
+
+
+<div id="panelhotelkendaraan2" class="panel2" style="display: none;">
+<br><br>
+ <table style="width:100%">
+  <tr style="font-size: 20px">
+    <th>Gambar</th>
+    <th>Jenis Kamar+fasilitas</th> 
+    <th>Transportasi</th>
+  </tr>
+  <tr>
+	<td><img src="borobudur.jpg" style="width:200px"</img></td>
+     <td>Hotel Borobudur                    
+    <br><span class="fa fa-star checked"></span> 
+	
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star" checked></span>
+<span class="fa fa-star"></span> 
+ 
+
+ <button class="button2"  id="jeniskamar4" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup4'; pilihkamar2(1);">Pilih Jenis Kamar </button></td>
+  
+   <div id="popup4">
+    	<div class="window2">
+        	<a href="#panelhotelkendaraan2" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+			<div class="polaroid container gambarkamar" >
+  			<img src="" alt="Norway" id="deluxeimg2" style="width:70%; padding-top: 20px" >
+  			<p id="kamar4"></p>
+  			<p><input type="radio" id="deluxe2" name="hotel" value="deluxe"  onchange="hargakamar(1)">DELUXE</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="standardimg2" style="width:70%; padding-top: 20px;">
+  			<p id="kamar5"></p>
+  			<p><input type="radio" id="standard2" name="hotel" value="standard" onchange="hargakamar(2)">STANDARD</p>
+			</div>
+       		<div class="polaroid container gambarkamar">
+  			<img src="" alt="Norway" id="superiorimg2" style="width:70%; padding-top: 20px;">
+  			<p id="kamar6"></p>
+  			<p><input type="radio" name="hotel" id="superior2" value="superior"  onchange="hargakamar(3)">SUPERIOR</p>
+			</div>
+			<div id="hargadeluxe" style="display:none;">
+			<p id="isikamar10"><br>Harga Paket Yang anda pilih = IDR 1.800.000 / malam
+			<br><br>Pemandangan: Kolam renang<br>
+			35 m²/377 ft²<br>
+			Balkon/teras<br>
+			2 ranjang single atau 1 ranjang king<br><br></p>
+    		</div>
+    		<div id="hargastandard" style="display:none;">
+     		<p id="isikamar11"><br>Harga Paket Yang anda pilih = IDR 1.099.980 / malam
+			<br><br>Pemandangan tanpa jendela<br>
+			35 m²/377 ft²<br>
+			Free wifi<br>
+			Shower<br>
+			2 ranjang single atau 1 ranjang king<br><br></p>
+     		</div>
+     		<div id="hargasuperior" style="display:none;">
+     		<p id="isikamar12"><br>Harga Paket Yang anda pilih = IDR 2.300.000 / malam
+			<br><br>Balkon/teras<br>
+			45 m²/484 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			1 ranjang super king atau 2 ranjang single<br><br></p>
+     		</div>
+     		<div id="hargadeluxe2" style="display:none;">
+			<p id="isikamar13"><br>Harga Paket Yang anda pilih = IDR 2.479.339 / malam
+			<br><br>Pemandangan: Kota<br>
+			38 m²/409 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Balkon/teras<br>
+			2 ranjang single dan 1 ranjang super king<br><br></p>
+    		</div>
+    		<div id="hargastandard2" style="display:none;">
+			<p id="isikamar14"><br>Harga Paket Yang anda pilih = IDR 1.836.759 / malam
+			<br><br>Pemandangan: Kebun<br>
+			16 m²/172 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			2 ranjang single dan 1 ranjang king<br><br></p>
+    		</div>
+    		<div id="hargasuperior2" style="display:none;">
+			<p id="isikamar15"><br>Harga Paket Yang anda pilih = IDR 2.677.686 / malam
+			<br><br>Pemandangan: Kota<br>
+			56 m²/603 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			2 ranjang single dan 1 ranjang super king<br><br></p>
+    		</div>
+    		<div id="hargadeluxe3" style="display:none;">
+			<p id="isikamar16"><br>Harga Paket Yang anda pilih = IDR 5.522.657 / malam
+			<br><br>Pemandangan: Sungai<br>
+			125 m²/1345 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower<br>
+			1 ranjang king<br><br></p>
+    		</div>
+    		<div id="hargastandard3" style="display:none;">
+			<p id="isikamar17"><br>Harga Paket Yang anda pilih = IDR 3.593.788 / malam
+			<br><br>Pemandangan: Kota<br>
+			31 m²/334 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub<br>
+			1 ranjang double<br><br></p>
+    		</div>
+    		<div id="hargasuperior3" style="display:none;">
+			<p id="isikamar18"><br>Harga Paket Yang anda pilih = IDR 7.984.502 / malam
+			<br><br>Pemandangan: Kebun<br>
+			120 m²/1292 ft²<br>
+			Kamar Bebas Asap Rokok<br>
+			Shower & bathtub terpisah<br>
+			1 ranjang King<br><br></p>
+    		</div>
+     		
+      		<br>
+       		<a href="#panelhotelkendaraan2"><button class="button button2" id="jenis">Berikutnya pilih kendaraan </button></a>
+        	
+       		</div>
+       		
+    </div>
+    
+    <td><center><select id="kendaraan4">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+
+	</select><br><br><button class="button2" id="pilih4" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onclick="paket(2); pilihkamar2(1);" >Pilih</button> </center></td>
+	 
+  </tr>
+  <tr>
+    <td><img src="meridian.jpg" style="width:200px; height:170px;"</img></td>
+    <td>Hotel Meridian Raja Ampat<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> <button class="button2" href="#popup" id="jeniskamar5" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup4';pilihkamar2(2);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan5">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br><button class="button2" id="pilih5" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(2); pilihkamar2(2);"> Pilih </button></center></td>
+  </tr>
+  <tr>
+    <td><img src="ubud.jpg" style="width:200px"</img></td>
+    <td>Hotel Ubud Bali<br><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> <button class="button2"  id="jeniskamar6" style="width:120px; height:45px; font-size: 16px;color:black;background-color:yellow;" onClick="window.location='#popup4'; pilihkamar2(3);">Pilih Jenis Kamar </button></td>
+   
+    <td><center><select id="kendaraan6">
+	  <option name="mobil" value="mobil">Mobil pribadi</option>
+	  <option name="bus" value="buss">Bus Pariwisata</option>
+	 
+	</select><br><br>
+   <button class="button2" id="pilih6" disabled style="width:60px; height:30px; font-size: 16px;color:black;background-color:yellow;" onClick="paket(2); pilihkamar2(3);"> Pilih </button></center></td>
+  </tr>
+</table>
+
+
+
+</div>
+
+<div id="paneldatadiri" class="panel3" style="display:none">
+<br>
+			<center><h1>Formulir Data Diri</h1></center><br>
+<pre>
+			<z style="font-size:17px;">
+			<center><p class="datadiri" >*Nama lengkap =  	<textarea cols="40" rows="2" id="namalengkap"></textarea></p></center><br>
+			<center><p class="datadiri" >No HP = 		<textarea cols="40" rows="2" id="nomorhp"></textarea></p></center><br>
+			<center><p class="datadiri" >Email = 		<textarea cols="40" rows="2" id="email"></textarea></p></center><br>
+		</z>
+</pre>
+	<center><a href="#pembayaran" id="submithref"><button id="submit" class="button" onClick="submitdata()"> Submit Data Anda </button></a> </center>
+	</div>
+	
+	
+<div id="paneldatadiri2" class="panel3" style="display:none;">
+<br>
+			<center><h1>Formulir Data Diri</h1></center><br>
+<pre>
+		<z style="font-size:17px;">
+			<center><p class="datadiri" >*Nama lengkap =  	<textarea cols="40" rows="2" id="namalengkap2"></textarea></p></center><br>
+			<center><p class="datadiri" >No HP = 		<textarea cols="40" rows="2" id="nomorhp2"></textarea></p></center><br>
+			<center><p class="datadiri" >Email = 		<textarea cols="40" rows="2" id="email2"></textarea></p></center><br>
+		</z>
+</pre>
+	<center><a href="#pembayaran" id="submithref2"><button id="submit2" class="button" onClick="submitdata2()"> Submit Data Anda </button></a> </center>
+	</div>
+ 
+
+  
+  
+    <div id="isidata" style="background-color:royalblue;color:white;word-wrap: break-word;display:none;">
+   <br><center><h1 >Data Pemesanan </h1></center>
+  <div> <pre>
+ <z style="font-size: 16px;">
+  <p id="isinama" style="margin-left: 5em">Nama : </p>
+  <p id="isinohp" style="margin-left: 5em">No Hp : </p>
+  <p id="isiemail" style="margin-left: 5em">Email : </p>
+  <p id="isitanggal" style="margin-left: 5em">Tanggal Keberangkatan : </p>
+  <p id="isiwaktu" style="margin-left: 5em">Waktu Tour : </p>
+  <p id="isinegara" style="margin-left: 5em">Negara tujuan : </p>
+   
+  <p id="hasiltampil" style="margin-left: 5em;">Hotel, jenis kamar, transportasi : </p>
+  <br>
+  </z></pre>
+  </div>
+
+  </div>
+  
+  <div id="pembayaran" style="background-color:#F3614C;display:none;">
+<center> <br>
+  <h2>Pilih metode pembayaran : </h2><br><br>
+<form>
+  <input class="gambarbayar" type="radio" name="radioo" id="kredit" value="Kredit">Kredit
+  <img  src="kredit.jpg" style="width:100px;"> <br>
+  <input class="gambarbayar" type="radio" name="radioo" id="transfer" value="Transfer"> Transfer
+   <img  src="transfer.jpg" style="width:100px;"><br>
+  <input class="gambarbayar" type="radio" name="radioo" id="paypal" value="paypal"> Paypal
+  <img  src="paypal.jpg" style="width:100px">
+  </form>
+</center>
+<br><br>
+ <center><button id="boking" class="button" onClick="sweet()"> BOOKING </button> </center>
+	</div>	
+	
+	
+
+
+
+<center>
+<div id="panel1" class="panel animated bounceIn" style="display : none;">
+<p class="judul"><br><br> TOUR SINGAPORE PAKET HEMAT! Anda telah memilih hotel dan jenis transport:
+</p>
+<br>
+<p class="judul" id="hasil1" style="word-wrap: break-word;"><br> </p>
+<br>
+<p class="judul" >Beberapa destinasi yang akan anda nikmati </p>
+
+<div class="polaroid container">
+  <img src="singapore1.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Taman Merlin</p>
+  
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    <p class="deskripsi">Merlion park merupakan tempat pertama yang wajib kamu kunjungi ketika berlibur ke Singapura. Di Merlion park ini terdapat patung kepala singa yang merupakan landscape dari negara Singapura.</p>
+   <br><br><a class="deskripsi" id="link1" href="" onClick="disableScroll(1)">Video Destinasi</a>
+    
+    
+  </div>
+
+</div>
+
+
+<div class="polaroid container">
+  <img src="singapore2.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Universal Studio</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Universal Studios Singapore dibuka pada bulan Januari 2010, merupakan wahana bermain Universal Studios yang pertama kali dibuka di wilayah Asia Tenggara, dan merupakan yang kedua di wilayah Asia setelah Universal Studios Japan. Taman bermain bertema film-film terkenal Hollywood produksi Universal Studios ini berlokasi di Pulau Sentosa, Singapura.</p>
+     
+   <br><a class="deskripsi" id="link2" href="" onClick="disableScroll(2)">Video Destinasi</a>
+    
+    
+  </div>
+
+  </div>
+
+
+<div class="polaroid container">
+  <img src="singapore3.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Orchard Road</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Orchard Road di Singapura adalah pusat perbelanjaan paling terkenal di Asia, adalah rumah bagi fashion favorit, toko-toko ritel, dan banyak lagi pilihan lifestyle. Pada saat ini, Orchard Road di Singapura dipenuhi oleh pusat perbelanjaan ikonik, restoran, dan hotel yang berpadu dengan ritel, pusat kuliner, dan pilihan hiburan.</p>
+   <br><a class="deskripsi" id="link3" href="" onClick="disableScroll(3)">Video Destinasi</a>
+    
+ 
+  </div>
+  </div>
+
+
+ <div class="polaroid container">
+  <img src="singapore4.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" > 
+  <p>ChinaTown</p>
+    <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Kota bersejarah di Singapura, adalah perpaduan masa lalu dan masa kini, berisikan toko-toko tradisional dan pasar malam, juga toko-toko modern dan cafe. Trotoar beratap yang padat, gang suram, dan pedagang kaki lima yang berisik adalah peninggalan dari masa lalu Chinatown.</p>
+     
+   <br><a class="deskripsi" id="link4" href="#popup" onClick="disableScroll(4)">Video Destinasi</a>
+    
+  
+   
+  </div>
+  </div>
+  <br><br><br>
+  <center><input type="button" class="button lanjutisidata" value="Lanjut isi data diri"  onclick="formulir(1)"</center>
+ 
+	  <div id="popup" >
+    	<div class="window">
+        	<a href="#panel1" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+            <video class="video1" id="srcvideo" style="pointer-events:auto;" width="600" height="400" controls >
+					<source  src="" type="video/mp4">
+			  Your browser does not support HTML5 video.
+			</video>
+			
+        </div>
+    </div>
+    
+</div> 
+
+<div id="panel2" class="panel animated zoomInUp" style="display : none;">
+<p class="judul"><br><br> TOUR HAWAII PAKET HEMAT! </p>
+<p id="hasil3"></p>
+<br>
+<p class="judul">Beberapa destinasi yang akan anda nikmati adalah : </p>
+
+<div class="polaroid container">
+  <img src="hawaii1.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Lanikai Beach</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Lanikai Beach dalam bahasa Inggris namanya Heavenly Sea. Apabila dilihat benar-benar seperti surga dan sangat menawan. Wisatawan banyak yang berkunjung dan sangat suka melihat keindahan pantai berpasir putih dan air yang jernih. </p>
+   <br><a class="deskripsi" id="link5" href="" onClick="disableScroll(5)">Video Destinasi</a>
+    
+   
+	</div>
+</div>
+
+<div class="polaroid container">
+  <img src="hawaii2.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Hilo</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Hilo adalah kota yang ada di pantai dan mempunyai beberapa tempat menarik. Antara lain adalah lapangan golf, teater klasik nan cantik, museum, dan pertokoan di pusat kota. Pusat Kota Hilo ini merupakan kota kecil namun terpadat di Hawaii. Hal itu dikarenakan di Kota ini terdapat berbagai macam tempat tempat yang wah dan modern. </p>
+   <br><a class="deskripsi" id="link6" href="#popup2" onClick="disableScroll(6)">Video Destinasi</a>
+    
+    
+  </div>
+
+  </div>
+
+
+<div class="polaroid container">
+  <img src="hawaii3.jpeg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Waimea Canyon</p>
+  <div class="overlay">
+     <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Canyon yang menyajikan pemandangan memikat ini punya lebar 1 mil, panjang lebih dari 100 mil, dan kedalamannya sampai dengan 3.600. Wisatawan yang mengunjungi tempat ini akan disuguhkan pemandangan berupa tebing dengan warna yang hijau. </p>
+   <br><a class="deskripsi"href="#popup2" onClick="disableScroll(7)">Video Destinasi</a>
+    
+   
+  </div>
+  </div>
+
+
+ <div class="polaroid container">
+  <img src="hawaii4.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" > 
+  <p>Polynesian Cultural Center</p>
+    <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Polynesian Cultural Center. Lokasi yang satu ini sudah masuk ke dalam salah satu tempat terbaik yang ada di Hawaii. Wisatawan dan pengunjung pun pasti akan datang kemari untuk melihat kebudayaan sekitar yang tinggi. Tempat ini cocok bagi anda yang ingin berwisata sejarah. </p>
+   <br><a class="deskripsi" id="link8" href="" onClick="disableScroll(8)">Video Destinasi</a>
+    
+   
+  
+  </div>
+  </div>
+  
+  <center><input type="button" class="button lanjutisidata" value="Lanjut isi data diri"  onclick="formulir(1)"</center>
+
+  <div id="popup2" >
+    	<div class="window">
+        	<a href="#panel2" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+            <video class="video1" id="srcvideo2" style="pointer-events:auto;" width="600" height="400" controls >
+					<source  src="" type="video/mp4">
+			  Your browser does not support HTML5 video.
+			</video>
+			
+        </div>
+    </div>
+
+</div> 
+
+<div id="panel3" class="panel animated zoomIn" style="display : none;">
+<p class="judul"><br><br> TOUR INDONESIA PAKET HEMAT!</p>
+<p id="hasil2"> </p>
+<br>
+<p align="center">Beberapa destinasi yang akan anda nikmati adalah : </p>
+<div class="polaroid container">
+  <img src="indo1.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Pulau Komodo</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Pulau Komodo masuk dalam kawasan Taman Nasional Komodo bersama pulau-pulau lain di sekitar Kepulauan Nusa Tenggara. Pada tahun 1986, UNESCO menetapkan tempat wisata di Indonesia ini sebagai salah satu situs warisan dunia.</p>
+   <br><a class="deskripsi" href="" id="link9" onClick="disableScroll(9)">Video Destinasi</a>
+    
+    
+  </div>
+
+</div>
+<div class="polaroid container">
+  <img src="indo2.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Raja Ampat</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Raja Ampat menjadi primadona baru di dunia pariwisata Indonesia. Pesona tempat wisata di Indonesia ini mulai banyak dikenal baik oleh wisatawan domestik maupun mancanegara. Kekayaan alam bawah laut Raja Ampat tak perlu diragukan lagi. Perairan di tempat wisata ini dikenal sebagai salah satu lokasi menyelam dan snorkeling terbaik di dunia.</p>
+   <br><a class="deskripsi" href="" id="link10" onClick="disableScroll(10)">Video Destinasi</a>
+    
+    
+  </div>
+
+  </div>
+
+
+<div class="polaroid container">
+  <img src="indo3.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Bali</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Bali memiliki banyak keindahan alam yang sangat indah mulai dari deretan pantainya, suasana pegunungannya sampai pura-pura sakralnya. Dari sekian banyak tempat wisata menarik, yang paling populer di telinga wisatawan tentu saja Pantai Kuta.</p>
+   <br><a class="deskripsi" href="" id="link11" onClick="disableScroll(11)">Video Destinasi</a>
+    
+    
+  </div>
+  </div>
+
+
+ <div class="polaroid container">
+  <img src="indo4.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" > 
+  <p>Candi Borobudur</p>
+    <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Candi Borobudur merupakan kompleks candi Buddha terbesar di dunia. Tempat wisata di Indonesia ini ditetapkan UNESCO sebagai salah satu situs warisan dunia pada tahun 1991.</p>
+   <br><a class="deskripsi" href="" id="link12" onClick="disableScroll(12)">Video Destinasi</a>
+    
+    
+  </div>
+  </div>
+  
+  <br><br><br>
+  <center><input type="button"  class="button lanjutisidata2" value="Lanjut isi data diri"  onclick="formulir(2)"</center>
+
+<div id="popup7" >
+    	<div class="window">
+        	<a href="#panel3" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+            <video id="srcvideo3" class="video1" style="pointer-events: auto;" width="600" height="400" controls >
+					<source src="" type="video/mp4">
+			  Your browser does not support HTML5 video.
+			</video>
+			
+        </div>
+    </div>
+
+</div> 
+
+<div id="panel4" class="panel animated zoomIn" style="display : none;">
+<p class="judul"><br><br> TOUR PERANCIS PAKET HEMAT!</p>
+<p id="hasil4"></p>
+<br>
+<p class="judul"> Beberapa destinasi yang akan anda nikmati adalah :</p>
+
+<div class="polaroid container">
+  <img src="perancis1.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Seine River</p>
+  <div class="overlay">
+   <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Dari sungai inilah Anda bersama keluarga atau teman-teman bisa berlayar dan mengelilingi kota Paris berikut seluruh pesonanya. Satu cara paling seru dan asyik yang paling direkomendasikan di sini adalah dengan naik kapal pesiar.</p>
+   <br><a class="deskripsi"href="" id="link13" onClick="disableScroll(13)">Video Destinasi</a>
+    
+   
+  </div>
+
+</div>
+<div class="polaroid container">
+  <img src="perancis2.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Museum Louvre</p>
+  <div class="overlay">
+     <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Museum Louvre rupanya termasuk di dalam daftar museum paling besar di dunia dan tentunya menjadi yang paling populer di Paris. Berisi sekitar 380 ribu obyek pameran yang paling terkenal di dunia adalah lukisan Mona Lisa yang dilukis oleh Leonardo da Vinci.</p>
+   <br><a class="deskripsi"href="" id="link14" onClick="disableScroll(14)">Video Destinasi</a>
+    
+    
+  </div>
+
+  </div>
+
+
+<div class="polaroid container">
+  <img src="perancis3.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" >
+  <p>Menara Eiffel</p>
+  <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">ikon kota Paris apabila sudah sampai di Paris dan keseruan akan lebih maksimal jika pengunjung naik ke atas untuk bisa mendapatkan pemandangan kota Paris. Datanglah pada malam hari sehingga cahaya lampu kota yang kerlap-kerlip bisa diabadikan.</p>
+   <br><a class="deskripsi"href="" id="link15" onClick="disableScroll(15)">Video Destinasi</a>
+    
+   
+  </div>
+  </div>
+
+
+ <div class="polaroid container">
+  <img src="perancis4.jpg" alt="Norway" class="image" style="width:90%; padding-top: 20px" > 
+  <p>Arc de Triomphe</p>
+    <div class="overlay">
+    <div class="text">Deskripsi</div><br><br>
+    
+     <p class="deskripsi">Gerbang Kemenangan dan obyek satu ini adalah berupa monumen yang paling populer di kota Paris. Monumen ini pun juga dianggap sebagai salah satu gapura paling besar yang ada dalam sejarah. </p>
+   <br><a class="deskripsi"href="" id="link16" onClick="disableScroll(16)">Video Destinasi</a>
+    
+    
+  </div>
+  </div>
+  
+   <center><input type="button" class="button lanjutisidata" value="Lanjut isi data diri"  onclick="formulir(1)"</center>
+<div id="popup8" >
+    	<div class="window">
+        	<a href="#panel4" class="close-button" title="Close" onClick="tutup()" style="font-size:38px;">X</a>
+            <video class="video1" id="srcvideo4"  style="pointer-events: auto;" width="600" height="400" controls >
+					<source src="" type="video/mp4">
+			  Your browser does not support HTML5 video.
+			</video>
+			
+        </div>
+    </div>
+
+</div> 
+</center>
+
+</body>
+</html>
