@@ -1,0 +1,112 @@
+.container{
+	margin-top:auto;
+	position: relative;
+	background:#FFFFFF;
+	border:1px solid #E0E0E0;
+	padding:1px;
+	margin-right: auto;
+    margin-left: auto;
+	width: 90%;
+	top:10%;
+	bottom:0px;
+	
+}
+
+
+.navbar{
+        border: none;
+        background-color:#000000;
+    }
+
+.cover {
+	padding: 3px 3px 3px 3px;
+	display: block;
+	}
+
+.footer{
+	border:1px solid #96BA5A;
+	text-align:center;
+	padding:10px;
+	background-color: #96BA5A;
+    overflow: hidden;
+}
+
+.header{
+	border:1px solid #DDDDDD;
+	text-align:center;
+	padding:10px;
+	background-color: #DDDDDD;
+}
+
+.title { 
+	padding-bottom: 5px;	
+	padding-top:5px;  
+}
+
+.credit { 
+	padding-bottom: 0px;	
+	padding-top: 0px;  
+}
+
+html, body {
+  	width: 100%;
+  	height: 100%;
+}
+
+.content {
+  	width: 80% ;
+  	height: 60%;
+  	float: right;
+ 	background-color: #DDDAAA;
+	text-align:center;
+}
+
+.btn-primary {
+	color: #FFFFFF;
+	background-color: #338905;
+	border-color: #338905;
+}
+
+
+.btn-secondary {
+	color: #FFFFFF;
+	background-color: #890507;
+	border-color: #890507;
+}
+
+.btn-third {
+	color: #FFFFFF;
+	background-color: #057589;
+	border-color: #057589;
+}
+
+.btn-fourth {
+	color: #FFFFFF;
+	background-color: #500589;
+	border-color: #500589;
+}
+
+.h5 {
+	font-color : white;
+	font : Segoe UI;
+}
+
+.img {
+    width: 10%;
+    height: 10%;
+}
+
+.portrait {
+    height: 80px;
+    width: 30px;
+}
+
+.landscape {
+    height: 30px;
+    width: 80px;
+}
+
+.square {
+    height: 75px;
+    width: 75px;
+}
